@@ -1,37 +1,14 @@
-# Residue Interaction Network of the Coagulation Factor VIII Protein Structure (FVIII-RIN)
 
-### Thanks for your interest in using the FVIII Residue Interaction Network (RIN).
+### Here is a description of each dataset used in the study.
 
-<img align="right" src="images/Figure_for_GitHub_RIN_FVIII.png">
+> - **10_folds_classification_result.csv:** - This is the results of the 10-fold classification displayed in Figure 3a of the manuscript, using 3 classifiers.
+> - **2r7e_network_formatted.csv:** - This is the FVIII Residue Interaction Network (RIN), prepared using the structure determined by Shen et al., Blood 2008 (PDB ID 2R7E). For the details of how the network was obtained, please refer to the “Methods” of our manuscript.
+> - **A2_mutagenesis.csv:** - This contains the chromogenic and the antigen binding (expression levels) of the mutant constructs prepared using alanine mutations. This is for the A2 domain only (Plantier et al., Thrombosis and Haemostasis, 2012).
+> - **C2_mutagenesis.csv:** - This contains the chromogenic and the antigen binding (expression levels) of the mutant constructs prepared using alanine mutations. This is for the C2 domain only (Pellequer et al., Thrombosis and Haemostasis, 2011).
+> - **binding_sites_only.csv:** - These is a list of residues reported to be involved in interactions with other coagulation factors and the phospholipid membrane of platelets. For the list of references, please refer to our manuscript.
+> - **Relative_Surf_Area_2R7E.csv:** - We calculated the relative exposure of all amino acids, indicating their degree of burial in a structure. Relative exposures were calculated by normalizing the surface area of the residue by the surface area of the same type of residue in a reference state (we used the reference values by Bendell CJ et al., Bioinformatics 2014, of the solvent-excluded surface areas of the 20 standard amino acids in Gly-X-Gly tripeptides).
+> - **RIN_pred_chromo.csv:** - The predicted chromogenic activity of residues from the A1, A3 and C1 domains. This is the output of the ensemble of classifiers.
 
-Hemophilia A is a relatively rare hereditary coagulation disorder, caused by the synthesis of defective Factor VIII protein. This condition impairs the coagulation cascade, and if left untreated, causes permanent joint damage and poses a risk of fatal intracranial hemorrhage in case of traumatic events. In its severe form, patients who have access to supportive health care systems can benefit from prophylactic treatment, which consists of regular life-long administrations of recombinant forms of the FVIII protein.
-
-We transformed the FVIII protein structure in an undirected, unweighted graph, where the nodes are the amino acids, and two nodes are connected by an edge if the amino acids are close to each other in the 3D structure.
-
-With this simple and intuitive approach, we calculated several centrality measures of the residues of the network and observed that perturbations to the most central residues produce the same effects as alanine mutations – namely, the reduction in expression and chromogenic activity.
-
-Here you will find the datasets and the source code used in the manuscript “Protein residue network analysis reveals fundamental properties of the human coagulation factor VIII”, by Tiago Lopes, Ricardo Rios, Tatiane Nogueira and Rodrigo Mello (Submitted).
-
-Please note that we cannot make available the data from other databases; to access the complete mutation datasets, please visit the EAHAD and the CHAMPS websites.
-
-The organization of the material is:
-
-> - **/datasets** - contains the datasets to reproduce our findings and create the figures. 
-> - **/src** - contains the source code for the machine learning framework and for other analyses.
-> - **/results** - you can find the pre-trained classification models in this folder.
-> - **/workdir** - please execute the code when you are inside this directory.
-
-To reproduce all experiments using individual ML classification models on the training dataset, please run the source codes:
-
-```Prolog
-Rscript ../src/plot_centrality.R
-```
-
-You can also open R and run everything (inside the workdir directory), for example:
-
-```Prolog
-source(“../src/plot_centrality.R”)
-```
-If you find any issues with the code, please contact us: tiago-jose@ncchd.go.jp, ricardoar@ufba.br
+If you find any issues, please contact us: tiago-jose@ncchd.go.jp, ricardoar@ufba.br.
 
 On the behalf of all of the authors, we appreciate your interest in the FVIII RIN and hope it is useful to your research.
