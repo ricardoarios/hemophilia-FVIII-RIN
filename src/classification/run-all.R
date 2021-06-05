@@ -26,20 +26,21 @@
 ###
 rm(list=ls())
 ### default dataset
-source("src/preprocessing/load-data-classif.R")
+source("../src/preprocessing/load-data-classif.R")
 
 ###
 # loading machine learning methods
 ###
-source("src/classification/dt.R")
-source("src/classification/knn.R")
-source("src/classification/dwnn.R")
-source("src/classification/rf.R")
-source("src/classification/svm.R")
-source("src/classification/naive.R")
-source("src/classification/xgboost.R")
+source("../src/classification/dt.R")
+source("../src/classification/knn.R")
+source("../src/classification/dwnn.R")
+source("../src/classification/rf.R")
+source("../src/classification/svm.R")
+source("../src/classification/naive.R")
+source("../src/classification/xgboost.R")
 #run.methods<-c("dt", "knn", "dwnn", "rf", "svrpol", "svrrad", "naive", "xgboost")
-run.methods<-c("svrrad", "naive", "xgboost") # preparing ensemble
+#run.methods<-c("svrrad", "naive", "xgboost") # preparing ensemble
+run.methods<-c("svrrad", "naive") # preparing ensemble
 
 ###
 # create matrices of results
