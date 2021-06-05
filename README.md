@@ -33,10 +33,14 @@ You can also open R and run everything (inside the workdir directory), for examp
 source(“../src/plot_centrality.R”)
 ```
 
-To run our machine learning models, from the workdir directory, run the following command:
+To run our machine learning models, from the workdir directory, run one of the following commands:
 
 ```Prolog
 source(“run-all.R”)
+```
+
+```Prolog
+Rscript run-all.R
 ```
 All machine learning models are saved in the results/models directory and the final result table is stored in results/final-table.csv.
 
