@@ -32,6 +32,14 @@ You can also open R and run everything (inside the workdir directory), for examp
 ```Prolog
 source(“../src/plot_centrality.R”)
 ```
+
+To run our machine learning models, from the workdir directory, run the following command:
+
+```Prolog
+source(“run-all.R”)
+```
+All machine learning models are saved in the results/models directory and the final result table is stored in results/final-table.csv.
+
 If you find any issues with the code, please contact us: tiago-jose@ncchd.go.jp, ricardoar@ufba.br
 
 On the behalf of all of the authors, we appreciate your interest in the FVIII RIN and hope it is useful to your research.
