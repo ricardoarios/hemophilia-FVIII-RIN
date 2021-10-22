@@ -36,7 +36,8 @@ library(BBmisc)
 source("src/preprocessing/cvClass.R")
 
 
-hemo.data<-read.table(file="dataset/RIN - Supplementary Table XXX - 2R7E structure residue network.csv", sep=";", header = T)
+#hemo.data<-read.table(file="dataset/RIN - Supplementary Table XXX - 2R7E structure residue network.csv", sep=";", header = T)
+hemo.data<-read.table(file="datasets/RIN-2R7E.csv", sep=";", header = T)
 hemo.data<-subset(hemo.data, select = -c(res, node))
 
 activity<-hemo.data$Activity
